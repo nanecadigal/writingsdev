@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
 *,
 *::after,
 *::before {
@@ -9,6 +11,9 @@
 body {
   background-color: black;
   color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 section {
   margin-bottom: 0.5rem;
@@ -52,9 +57,9 @@ header {
   padding: 0 12rem;
 }
 
-header a {
+.brand {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: none;
   color: white !important;
 }
@@ -77,15 +82,15 @@ header a {
   align-items: center;
   border-bottom: 1px solid #d3d3d3;
   padding-bottom: 3.5rem;
+  padding-top: 2rem;
 }
 
 .hero img {
-  width: 25rem;
-  height: 13rem;
+  object-fit: cover;
   margin-bottom: 0.5rem;
 }
 .hero h1 {
-  color: red !important;
+  color: #ff7575 !important;
   font-style: italic;
   margin-bottom: 0.5rem;
 }
@@ -133,58 +138,73 @@ header a {
   border-bottom: 1px solid #d3d3d3;
 }
 .card-container {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 55px 25px;
+  gap: 55px 25px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-bottom: 5rem;
+  gap: 3rem;
 }
-.cards {
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: white;
-  color: #000000 !important;
+  color: black;
   padding: 1.5rem;
   border-radius: 1rem;
+  width: 450px;
 }
-.cards img {
-  width: 100%;
+.card img {
   max-height: 10rem;
   object-fit: cover;
   border-radius: 1rem;
+  margin-bottom: 0.875rem;
+  width: 100%;
 }
-.cards * {
-  margin-bottom: 0.75rem;
+.card-body * {
+  margin-bottom: 0.875rem;
 }
-.cards div {
+.card-footer {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 0;
+  gap: 15px;
+  align-items: center;
 }
-
 .pagination {
-    display: flex;
-    list-style-type: none;
-    justify-content: center;
-    gap: 2rem;
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  gap: 2rem;
 }
 .pagination li {
-    font-weight: 500;
-    cursor: pointer;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 footer {
-    padding: 0 12rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 2.75rem;
+  padding: 0 12rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.75rem;
 }
 footer div p span {
-    padding: 0.275rem 0.5rem;
-    background-color: red;
-    align-self: center;
-    border-radius: 0.5rem;
+  padding: 0.275rem 0.5rem;
+  background-color: #4699e0;
+  align-self: center;
+  border-radius: 0.5rem;
 }
 footer div p span a {
-    text-decoration: none;
-    font-size: 0.875rem;
-    color: white !important;
+  text-decoration: none;
+  font-size: 0.875rem;
+  color: white !important;
+  font-weight: 400;
+}
+.follow {
+  background-color: #4699e0;
+  padding: 0.275rem 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
 }
